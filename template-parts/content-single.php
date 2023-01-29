@@ -18,6 +18,9 @@
 
                 <div class="article-header">
 
+                    <!-- Yoast SEO Breadcrumbs implementation -->
+                    <?php if (function_exists('yoast_breadcrumb')) yoast_breadcrumb('<div id="breadcrumbs">', '</div>'); ?>
+
                     <h1 class="article-title"> <?php the_title(); ?> </h1>
 
                     <div class="article-meta">
@@ -45,16 +48,6 @@
                 </div>
 
                 <div class="article-content"> <?php the_content(); ?> </div>
-
-                <div class="article-categories">
-
-                    <span>دسته‌بندی‌ها: </span>
-
-                    <?php $categories = get_the_category(); ?>
-                    <?php foreach ($categories as $category) : ?>
-                        <a class="article-category-item" href="<?php echo get_category_link($category->term_id); ?>"> <?php echo $category->name; ?> </a>
-                    <?php endforeach; ?>
-                </div>
 
             </article>
 

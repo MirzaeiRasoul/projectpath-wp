@@ -69,6 +69,31 @@
 .blog-main h6 {
   font-family: Tanha !important;
   font-weight: bold;
+  line-height: 1.5;
+}
+
+.blog-main h1 {
+  font-size: 1.75rem;
+}
+
+.blog-main h2 {
+  font-size: 1.4rem;
+}
+
+.blog-main h3 {
+  font-size: 1.1rem;
+}
+
+.blog-main h4 {
+  font-size: 1rem;
+}
+
+.blog-main h5 {
+  font-size: 0.9rem;
+}
+
+.blog-main h6 {
+  font-size: 0.8rem;
 }
 
 /* GLOBAL BLOG STYLES
@@ -78,6 +103,54 @@
   visibility: visible;
   background: #FFFFFF;
   box-shadow: 0 0 0.5rem 0 rgb(7 12 18 / 8%);
+}
+
+.ast-below-header-wrap .ast-search-menu-icon {
+  padding: 0 0.25rem;
+}
+
+.ast-below-header-wrap .astra-search-icon {
+  padding: 0.5rem;
+}
+
+.astra-search-icon .ast-icon {
+  display: flex;
+  color: var(--ast-global-color-0);
+  opacity: 0.9;
+}
+
+.ast-icon.icon-search svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+}
+
+.ast-below-header-wrap .menu-link {
+  font-size: 0.925rem !important;
+  font-weight: 500;
+  padding: 0 0.5rem;
+  margin-left: 1rem;
+}
+
+.ast-below-header-wrap .search-form {
+  left: 0 !important;
+  padding: 0;
+  background: var(--ast-global-color-3);
+  border-radius: 0.5rem;
+}
+
+.search-form .search-field {
+  color: var(--ast-global-color-0);
+  font-size: 0.95rem;
+  padding: 0.25rem 0.75rem;
+  margin: 0 !important;
+  opacity: 0.9;
+}
+
+.search-form .search-field:focus {
+  color: var(--ast-global-color-0);
+  background: transparent;
+  opacity: 1;
 }
 
 .blog-main {
@@ -210,6 +283,7 @@
 
 .blog-section-title {
   margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
 }
 
 .blog-article-item {
@@ -268,6 +342,25 @@
 
 /* POST (SINGLE) PAGE STYLES
 ---------------------------------------------------------------------------------------------------- */
+.article-header #breadcrumbs {
+  font-size: 0.95rem;
+  margin: 0 0.5rem 1.5rem;
+}
+
+#breadcrumbs a {
+  color: var(--ast-global-color-0);
+  padding: 0 0.25rem;
+}
+
+#breadcrumbs span {
+  color: var(--ast-global-color-1);
+}
+
+#breadcrumbs .breadcrumb_last {
+  color: var(--ast-global-color-5);
+  padding: 0 0.25rem;
+}
+
 .article-header .article-title {
   margin: 0 0.5rem 1.5rem;
 }
@@ -355,6 +448,7 @@
 
 .sidebar-title {
   margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
 }
 
 .sidebar-item {

@@ -12,7 +12,7 @@
 
         <div class="blog-main-container">
 
-            <h2 class="blog-section-title"> دسته‌بندی‌: <?php single_cat_title(); ?> </h2>
+            <h2 class="blog-section-title"> <?php single_cat_title(); ?> </h2>
 
             <?php query_posts(array('cat' => get_query_var('cat'), 'posts_per_page' => '10')); ?>
 

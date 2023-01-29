@@ -126,7 +126,8 @@ textarea {
   visibility: hidden;
 }
 
-a:focus {
+a:focus,
+input[type=search]:focus {
   outline: none;
 }
 
