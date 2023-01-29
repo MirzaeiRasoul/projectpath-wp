@@ -1,0 +1,211 @@
+/* FONT CONFIGURATION
+---------------------------------------------------------------------------------------------------- */
+/* --- Webfont: Shabnam --- */
+@font-face {
+  font-family: Shabnam;
+  src: url('../fonts/Shabnam/Shabnam-Light.eot');
+  src: url('../fonts/Shabnam/Shabnam-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Shabnam/Shabnam-Light.woff2') format('woff2'),
+    url('../fonts/Shabnam/Shabnam-Light.woff') format('woff'),
+    url('../fonts/Shabnam/Shabnam-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url('../fonts/Shabnam/Shabnam.eot');
+  src: url('../fonts/Shabnam/Shabnam.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Shabnam/Shabnam.woff2') format('woff2'),
+    url('../fonts/Shabnam/Shabnam.woff') format('woff'),
+    url('../fonts/Shabnam/Shabnam.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url('../fonts/Shabnam/Shabnam-Medium.eot');
+  src: url('../fonts/Shabnam/Shabnam-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Shabnam/Shabnam-Medium.woff2') format('woff2'),
+    url('../fonts/Shabnam/Shabnam-Medium.woff') format('woff'),
+    url('../fonts/Shabnam/Shabnam-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Shabnam;
+  src: url('../fonts/Shabnam/Shabnam-Bold.eot');
+  src: url('../fonts/Shabnam/Shabnam-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Shabnam/Shabnam-Bold.woff2') format('woff2'),
+    url('../fonts/Shabnam/Shabnam-Bold.woff') format('woff'),
+    url('../fonts/Shabnam/Shabnam-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-display: swap;
+}
+
+/* BASIC STYLES
+---------------------------------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  direction: rtl;
+}
+
+body,
+a,
+b,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+table,
+input,
+textarea,
+button,
+select,
+option {
+  font-family: Shabnam !important;
+}
+
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=reset],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=url],
+select,
+textarea {
+  padding: 0.5rem;
+}
+
+.wpforms-container textarea.wpforms-field-medium {
+  height: 150px;
+}
+
+/* OVERRIDE ASTRA STYLES
+---------------------------------------------------------------------------------------------------- */
+.ast-container,
+.ast-container-fluid {
+  padding: 0;
+}
+
+@media (min-width: 922px) {
+  .ast-container {
+    max-width: 1280px;
+  }
+}
+
+.ast-header-social-1-wrap .header-social-inner-wrap .ast-builder-social-element:first-child,
+.ast-footer-social-1-wrap .footer-social-inner-wrap .ast-builder-social-element:first-child {
+  margin-right: 0;
+}
+
+.ast-header-social-1-wrap .header-social-inner-wrap .ast-builder-social-element:last-child,
+.ast-footer-social-1-wrap .footer-social-inner-wrap .ast-builder-social-element:last-child {
+  margin-left: 0;
+}
+
+.ast-below-header-wrap {
+  display: none;
+  visibility: hidden;
+}
+
+a:focus {
+  outline: none;
+}
+
+.widget {
+  margin: 0 0 1rem 0;
+}
+
+.site-footer .widget_nav_menu .menu-link {
+  font-size: 15px;
+  line-height: 2.25;
+}
+
+@media (max-width: 921px) {
+  .site-below-footer-wrap[data-section="section-below-footer-builder"].ast-footer-row-mobile-stack .site-footer-section {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* CUSTOM STYLES
+---------------------------------------------------------------------------------------------------- */
+.ast-above-header.ast-above-header-bar {
+  background: rgba(7, 12, 18, 0.75) !important;
+}
+
+.ast-main-header-wrap .site-primary-header-wrap {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  border-radius: 20px;
+  background: var(--e-global-color-ecce345) !important;
+}
+
+@media (max-width: 921px) {
+  .ast-main-header-wrap .site-primary-header-wrap {
+    padding: 0 1rem !important;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 544px) {
+  .ast-main-header-wrap .site-primary-header-wrap {
+    padding: 0 0.5rem !important;
+    border-radius: 12px;
+  }
+}
+
+.cs-service-image img {
+  width: 170px !important;
+}
+
+.cs-company-carousel img {
+  width: 160px !important;
+}
+
+.cs-contact-image,
+.cs-contact-image div {
+  height: 100%;
+}
+
+.cs-contact-image img {
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.site-primary-footer-wrap .site-primary-footer-inner-wrap {
+  padding: 3rem !important;
+  border-radius: 20px;
+  background: var(--e-global-color-ecce345);
+}
+
+@media (max-width: 921px) {
+  .site-primary-footer-wrap .site-primary-footer-inner-wrap {
+    padding: 2rem !important;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 544px) {
+  .site-primary-footer-wrap .site-primary-footer-inner-wrap {
+    padding: 1rem !important;
+    border-radius: 12px;
+  }
+}
