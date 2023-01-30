@@ -14,15 +14,12 @@ function get_custom_content($template_name)
         <?php switch ($template_name) {
 
             case 'single':
-                if (is_single()) {
-                    get_template_part('template-parts/content', $template_name);
-                }
+                if (is_single()) get_template_part('template-parts/content', $template_name);
                 break;
 
             default:
                 get_template_part('template-parts/content', $template_name);
                 break;
-
         } ?>
 
         <?php astra_primary_content_bottom(); ?>

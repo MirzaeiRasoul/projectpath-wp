@@ -340,6 +340,21 @@
   margin-left: 0.5rem;
 }
 
+.blog-show-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.blog-show-more a {
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  background: var(--ast-global-color-0);
+}
+
 /* POST (SINGLE) PAGE STYLES
 ---------------------------------------------------------------------------------------------------- */
 .article-header #breadcrumbs {
@@ -464,6 +479,8 @@
 }
 
 .sidebar-item-thumbnail img {
+  width: 100%;
+  height: auto;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 

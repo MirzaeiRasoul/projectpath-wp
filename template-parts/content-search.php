@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template part for displaying a category page.
+ * Template part for displaying search page.
  */
 
 ?>
@@ -14,9 +14,11 @@
 
             <div class="blog-main-section">
 
-                <h1 class="blog-section-title"> مقالات <?php single_cat_title(); ?> </h1>
+                <h1 class="blog-section-title"> نتایج جستجو برای '<?php the_search_query(); ?>' </h1>
 
-                <?php $args = array('cat' => get_query_var('cat'), 'posts_per_page' => '10'); ?>
+                <span> <?php echo $wp_query->found_posts; ?> مقاله یافت شد.</span>
+
+                <?php $args = array('post_type' => 'post', 'posts_per_page' => '10', 's' => get_search_query()); ?>
 
                 <?php get_main_articles($args) ?>
 

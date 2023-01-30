@@ -12,7 +12,7 @@
 
         <div class="blog-main-container">
 
-            <article class="-container">
+            <article class="article-container">
 
                 <?php the_post(); ?>
 
@@ -55,35 +55,11 @@
 
         <aside class="blog-sidebar-container">
 
-            <h2 class="sidebar-title">آخرین مقالات</h2>
+            <div class="blog-sidebar-section">
 
-            <div class="sidebar-content">
+                <?php $args = array('posts_per_page' => 5, 'post__not_in' => array(get_the_ID())); ?>
 
-                <?php query_posts(array('posts_per_page' => 5, 'post__not_in' => array(get_the_ID()))); ?>
-
-                <?php while (have_posts()) : the_post(); ?>
-
-                    <a class="sidebar-item" href="<?php the_permalink(); ?>">
-
-                        <div class="sidebar-item-thumbnail"> <?php the_post_thumbnail(); ?> </div>
-
-                        <div class="sidebar-item-content">
-
-                            <h3 class="sidebar-item-title"> <?php the_title(); ?> </h3>
-
-                            <div class="sidebar-item-meta">
-
-                                <span class="sidebar-item-date"> <?php the_date(); ?> </span>
-
-                                <span class="sidebar-item-views"> <?php the_views(); ?> </span>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                <?php endwhile; ?>
+                <?php get_sidebar_newest_articles($args); ?>
 
             </div>
 

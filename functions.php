@@ -44,10 +44,10 @@ add_action('init', 'remove_pages_from_search');
  */
 function wpb_change_search_url()
 {
-	if (is_search() && !empty($_GET['s'])) {
+	if (is_search() && !empty($_GET['s'])) :
 		wp_redirect(home_url("/search/") . urlencode(get_query_var('s')));
 		exit();
-	}
+	endif;
 }
 add_action('template_redirect', 'wpb_change_search_url');
 
@@ -56,3 +56,8 @@ add_action('template_redirect', 'wpb_change_search_url');
  */
 require_once get_stylesheet_directory() . '/inc/custom-content-manager.php';
 require_once get_stylesheet_directory() . '/inc/custom-style-manager.php';
+
+/**
+ * Include template helper functions
+ */
+require_once get_stylesheet_directory() . '/inc/template-functions.php';

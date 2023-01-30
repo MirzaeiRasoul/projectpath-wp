@@ -12,39 +12,17 @@
 
         <div class="blog-main-container">
 
-            <h2 class="blog-section-title"> آرشیو مقالات </h2>
+            <div class="blog-main-section">
 
-            <?php query_posts(array('cat' => get_query_var('cat'), 'posts_per_page' => '10')); ?>
+                <h1 class="blog-section-title"> همه مقالات </h1>
 
-            <?php while (have_posts()) : the_post(); ?>
+                <?php $paged = get_query_var('paged') ? get_query_var('paged') : 1; ?>
 
-                <article class="blog-article-container">
+                <?php $args = array('post_type' => 'post', 'posts_per_page' => 2, 'paged' => $paged); ?>
 
-                    <a class="blog-article-item" href="<?php the_permalink(); ?>">
+                <?php get_main_articles($args, true) ?>
 
-                        <div class="blog-article-content-wrap">
-
-                            <h3 class="blog-article-title"> <?php the_title(); ?> </h3>
-
-                            <div class="blog-article-content"> اپل امروز در تاریخ ۲۸ دی ماه ۱۴۰۱ از سری لپتاپ‌های مک بوک جدید که از آخرین نسل چیپ‌ست‌های طراحی‌شده توسط این شرکت بهره می‌برند رونمایی کرد. چیپ‌ست‌های ...</div>
-
-                            <div class="blog-article-meta-content">
-
-                                <span class="blog-article-author"> <?php the_author(); ?> </span>
-
-                                <span class="blog-article-date"> <?php the_date(); ?> </span>
-
-                            </div>
-
-                        </div>
-
-                        <div class="blog-article-image"> <?php the_post_thumbnail(); ?> </div>
-
-                    </a>
-
-                </article>
-
-            <?php endwhile; ?>
+            </div>
 
         </div> <!-- .blog-main-container -->
 

@@ -126,6 +126,14 @@ textarea {
   visibility: hidden;
 }
 
+#ast-mobile-popup {
+  display: none;
+}
+
+#ast-mobile-popup.active {
+  display: block;
+}
+
 a:focus,
 input[type=search]:focus {
   outline: none;

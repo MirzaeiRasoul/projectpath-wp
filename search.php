@@ -6,12 +6,10 @@ if (!defined('ABSPATH')) {
 
 get_custom_style('blog');
 
-get_header(); ?>
+get_header();
 
-<h1 class="search-title">
-	<?php echo $wp_query->found_posts; ?>
-	<?php _e('Search Results Found For', 'locale'); ?>: "
-	<?php the_search_query(); ?>"
-</h1>
+get_custom_content('search');
 
-<?php get_footer(); ?>
+get_footer();
+
+?>
